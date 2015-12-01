@@ -36,12 +36,14 @@
         <div class="alert-message-container">
             <!-- instance 1, "predix" theme -->
             <px-alert-message
+                id="errorAlert"
                 type="error"
                 message-title="Well done!"
                 message="You successfully read this.">
             </px-alert-message>
 
             <px-alert-message
+                 id="warningAlert"
                 type="warning"
                 message-title="Oh snap!"
                 message="Change a few things up."
@@ -49,29 +51,32 @@
             </px-alert-message>
 
             <px-alert-message
-                type="important"
+            id="acknowldegeAlert"
+                type="acknowledge"
                 message-title="Warning!"
                 message="Best check yourself."
                 action="acknowledge">
             </px-alert-message>
 
             <px-alert-message
-                id="testAlert"
+                id="informationAlert"
                 type="information"
                 message-title="Heads up!"
                 message="This definitely needs your attention."
-                action="https://www.gesoftware.com/predix"
-                auto-dismiss="8000">
-            </px-alert-message>
-
-            <px-alert-message
-                type="information"
-                message-title="Heads up!"
-                message="This definitely needs your attention. Lorem Ipsum dolor sit amet consectetur"
                 action="https://www.gesoftware.com/predix">
             </px-alert-message>
 
             <px-alert-message
+                 id="autoDismissAlert"
+                type="information"
+                message-title="Heads up!"
+                message="This definitely needs your attention. Lorem Ipsum dolor sit amet consectetur"
+                action="https://www.gesoftware.com/predix"
+                auto-dismiss="1000">
+            </px-alert-message>
+
+            <px-alert-message
+            	id="customAlert"
                 type="custom"
                 message-title="Custom Alert"
                 message="The icon to the left is defined by placing content within the inner/outer px-alert-message tags."
@@ -80,6 +85,7 @@
             </px-alert-message>
 
             <px-alert-message
+                id="moreAlert"
                 type="more"
                 message="15"
                 action="dismiss">
@@ -88,7 +94,8 @@
 
         <script>
             suite('<px-alert-message>', function() {
-                var testAlert = document.getElementById('testAlert');
+                var testAlert = document.getElementById('informationAlert');
+                var autoDismissAlert = document.getElementById('autoDismissAlert');
 
                 test('reflects the "type" property', function() {
                     assert.equal(testAlert.type, "information");
@@ -106,15 +113,36 @@
                     assert.equal(testAlert.action, "https://www.gesoftware.com/predix");
                 });
 
-                test('reflects the "auto-dismiss" property and its a number', function() {
-                    assert.equal(testAlert.autoDismiss, 8000);
-                });
-
                 test('alert is not hidden', function() {
                     var wrapper = document.querySelector('#alert');
                     expect(wrapper.classList.contains('hidden')).to.equal(false);
                 });
-
+                
+                test('reflects the "auto-dismiss" property and its a number', function() {
+                    assert.equal(autoDismissAlert.autoDismiss, 1000);
+                });
+                test('alert hidden after the auto-dismiss time set', function() {
+                
+               setTimeout(myfunction,1000);
+               
+               function myfunction(){
+             
+                    var wrapper = document.querySelector('#autoDismissAlert');
+                    
+                    assert.equal(wrapper.classList.contains('hidden'),true);
+             }
+                
+              });  
+              
+              test('action type dismiss displays (x) control ', function() {
+                    var warningAlert = document.getElementById('warningAlert');
+                    assert.equal(warningAlert.action,"dismiss");
+                   
+                    
+                    
+                });
+              
+              
             });
         </script>
     </body>

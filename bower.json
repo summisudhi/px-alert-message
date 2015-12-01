@@ -10,8 +10,8 @@
     "Gruntfile.js",
     "sass",
     "bower_components",
-    "node_modules",
-    "test"
+    "node_modules"
+   
   ],
   "dependencies": {
     "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.3",
