@@ -1,6 +1,6 @@
 {
   "name": "px-button-group-design",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "authors": [
     "General Electric"
   ],
@@ -13,7 +13,7 @@
   ],
   "license": "Apache 2",
   "homepage": "https://github.com/PredixDev/px-button-group-design.git",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -30,11 +30,11 @@
     "px-iconography-design": "https://github.com/PredixDev/px-iconography-design.git#~0.2.0",
     "px-starter-kit-design": "https://github.com/PredixDev/px-starter-kit-design.git#~0.4.0"
   },
-  "_release": "0.3.10",
+  "_release": "0.3.11",
   "_resolution": {
     "type": "version",
-    "tag": "v0.3.10",
-    "commit": "bac35e1663b09e1ca154d859ab6214356b60e94a"
+    "tag": "v0.3.11",
+    "commit": "1b242d69f00c7c7b8c46ca83e051baf376a7648a"
   },
   "_source": "https://github.com/PredixDev/px-button-group-design.git",
   "_target": "~0.3.0",
