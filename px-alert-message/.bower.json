@@ -25,5 +25,16 @@
     "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
     "px-meta-buttons-design": "https://github.com/PredixDev/px-meta-buttons-design.git#~0.5.1",
     "px-starter-kit-design": "https://github.com/PredixDev/px-starter-kit-design.git#~0.4.0"
-  }
+  },
+  "homepage": "https://github.com/predixdev/px-alert-message",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "7ba18d9411d64cce637c04b89bf05514dbdcf0cb"
+  },
+  "_source": "https://github.com/predixdev/px-alert-message.git",
+  "_target": "v0.3.0",
+  "_originalSource": "https://github.com/predixdev/px-alert-message.git",
+  "_direct": true
 }
