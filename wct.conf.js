@@ -1,4 +1,4 @@
-tmodule.exports = {
+module.exports = {
     verbose: true,
     plugins: {
         local: {
